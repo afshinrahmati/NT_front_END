@@ -1,0 +1,24 @@
+html,
+* {
+    font-family: "Vazir", Vazir, Arial, sans-serif !important;
+}
+div#firs-header {
+    background: #d4d4d4;
+    color: #2f008a;
+    text-align: center;
+}
+.rtl {
+    text-align: right;
+    direction: rtl;
+}
+#log{
+    width: 9pc;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #c7c4ff, 2px 2px 10px #270233;
+}
+#flog-en,#flog-fa {
+    border: none;
+    margin-top: 6px;
+    background: none;
+    box-shadow: 2px 2px 10px #ff00000d;
+}

@@ -1,14 +1,17 @@
 <template>
-    <TheHeader /> 
-
+  <section>
+    <div id="world"></div>
+  </section>
 </template>
-<script>
 
-const $ = require("jquery");
+<script>
+import "assets/js/three";
+import "assets/js/three.min.js"
 export default {
-  mounted() {
-   
-  },
+
+mounted(){
+
+},
   methods: {
     // changeClass: async (language:any) => {
     //   if (language === "en") {
@@ -22,6 +25,8 @@ export default {
   },
 };
 </script>
-<style scoped>
+
+<style>
+@import "assets/style/three.css";
 
 </style>

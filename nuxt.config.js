@@ -17,11 +17,19 @@ export default {
             { hid: "description", name: "description", content: "" },
             { name: "format-detection", content: "telephone=no" },
         ],
-        link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+        script: [
+
+        ],
+        link: [{
+                rel: 'stylesheet',
+                href: './bootstrap.min.css'
+            },
+            { rel: "icon", type: "image/x-icon", href: "/favicon.ico" }
+        ]
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
-    css: [],
+    css: ["./assets/style/font.css", "./assets/style/bootstrap.min.css"],
 
     // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
     plugins: [],
@@ -38,7 +46,7 @@ export default {
 
     // Modules: https://go.nuxtjs.dev/config-modules
     modules: [
-        [
+        "bootstrap-vue/nuxt", [
             "@nuxtjs/i18n",
             {
                 locales: ["fa", "en"],
@@ -52,7 +60,6 @@ export default {
                 },
             },
         ],
-        "bootstrap-vue/nuxt",
         "@nuxtjs/axios",
     ],
 
@@ -61,7 +68,6 @@ export default {
         // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
         baseURL: "/",
     },
-
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {},
 };
