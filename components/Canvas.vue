@@ -208,7 +208,6 @@ canvas {
 /* ---- stats.js ---- */
 
 .count-particles {
-  background: #0000221c;
   position: absolute;
   top: 48px;
   left: 0;
@@ -227,5 +226,11 @@ canvas {
 }
 .js-count-particles {
   font-size: 1.1em;
+}
+.owl-carousel .owl-item img {
+  display: block;
+  width: 69%;
+  margin-left: 69px;
+  border-radius: 30px;
 }
 </style>
