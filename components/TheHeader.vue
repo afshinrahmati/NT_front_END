@@ -3,15 +3,8 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Navbar</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -23,42 +16,27 @@
               <a class="nav-link" href="#">Link</a>
             </li>
             <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Dropdown
               </a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
                 <li>
                   <a class="dropdown-item" href="#">Something else here</a>
                 </li>
               </ul>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-                >Disabled</a
-              >
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
           <form class="d-flex">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
             <button class="btn btn-outline-success" type="submit">
               Search
             </button>
@@ -67,60 +45,15 @@
       </div>
     </nav>
     <div id="world"></div>
-    <div class="wrapper">
-      <div class="circular-slider">
-        <div class="card">
-          <div class="content">
-            👋<br />
-            Hello World !
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            😇 <br />
-            Be Nice !
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            🥗<br />
-            Eat well !
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            🌱<br />
-            Stay Healthy !
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            🌟<br />
-            Shine Bright !
-          </div>
-        </div>
-        <div class="card">
-          <div class="content">
-            😄<br />
-            Be Happy !
-          </div>
-        </div>
-      </div>
-      <div class="info">
-        <div class="smile">: )</div>
-        <div class="name"></div>
-        <div class="msg">Swipe left or right</div>
-      </div>
-    </div>
+
   </section>
 </template>
 
 <script>
 import "assets/js/three";
-import "assets/js/card-automatic.js";
-import "assets/js/three.min.js";
+// import "assets/js/three.min.js";
 export default {
-  mounted() {},
+  mounted() { },
   methods: {
     // changeClass: async (language:any) => {
     //   if (language === "en") {
@@ -148,11 +81,9 @@ export default {
   background-color: #f5f5f5;
   perspective: 800px;
 
-  background: linear-gradient(
-    135deg,
-    #0000f100 0%,
-    rgb(255 255 255 / 27%) 100%
-  );
+  background: linear-gradient(135deg,
+      #0000f100 0%,
+      rgb(255 255 255 / 27%) 100%);
 }
 
 .circular-slider {

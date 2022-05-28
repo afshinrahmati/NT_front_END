@@ -11,7 +11,9 @@
         "lint:prettier": "prettier --check .",
         "lint": "yarn lint:js && yarn lint:prettier",
         "lintfix": "prettier --write --list-different . && yarn lint:js --fix",
-        "test": "jest"
+        "test": "jest",
+        "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
+        "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.13.6",
