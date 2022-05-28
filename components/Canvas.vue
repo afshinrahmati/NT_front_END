@@ -25,9 +25,7 @@ import carousel from "vue-owl-carousel";
 const $ = require("jquery");
 export default {
   mounted() {
-    window.addEventListener("load", function () {
-      /* ---- particles.js config ---- */
-
+    function test() {
       particlesJS("particles-js", {
         particles: {
           number: {
@@ -162,7 +160,10 @@ export default {
         requestAnimationFrame(update);
       };
       requestAnimationFrame(update);
-    });
+    }
+    window.setTimeout(() => {
+      test()
+    }, 2000);
   },
   methods: {
     // changeClass: async (language:any) => {
@@ -221,12 +222,15 @@ canvas {
   font-family: Helvetica, Arial, sans-serif;
   font-weight: bold;
 }
+
 .owl-stage {
   margin-top: 65px;
 }
+
 .js-count-particles {
   font-size: 1.1em;
 }
+
 .owl-carousel .owl-item img {
   display: block;
   width: 69%;

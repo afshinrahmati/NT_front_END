@@ -818,5 +818,6 @@ function init(event) {
 
     loop();
 }
-
-window.addEventListener("load", init, false);
+window.setTimeout(() => {
+    init()
+}, 2000);
