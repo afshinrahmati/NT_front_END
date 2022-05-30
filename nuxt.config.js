@@ -1,12 +1,7 @@
 import fa from "./locales/fa";
 import en from "./locales/en";
-const routerBase = process.env.DEPLOY_ENV === "GH_PAGES" ? {
-    router: {
-        base: "/NT_front_END/"
-    }
-} : {}
+
 export default {
-    ...routerBase,
     // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
     ssr: false,
 
