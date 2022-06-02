@@ -45,7 +45,7 @@
       </div>
     </nav>
     <div id="world"></div>
-
+    <h1 class="rainbow-text">{{ $t('messages.welcome') }}</h1>
   </section>
 </template>
 
@@ -75,106 +75,48 @@ export default {
   --time: 0.2s;
 }
 
-.wrapper {
-  height: 100vh;
-  overflow: hidden;
-  background-color: #f5f5f5;
-  perspective: 800px;
 
-  background: linear-gradient(135deg,
-      #0000f100 0%,
-      rgb(255 255 255 / 27%) 100%);
-}
 
-.circular-slider {
-  position: relative;
-  display: block;
-  width: 100%;
-  height: 90%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
-  transform-style: preserve-3d;
-}
 
-.card {
+/* Style the rainbow text element. */
+.rainbow-text {
+  margin: 18% 39%;
+  /* Create a conic gradient. */
+  /* Double percentages to avoid blur (#000 10%, #fff 10%, #fff 20%, ...). */
+  background: #CA4246;
+  background-color: #CA4246;
   position: absolute;
-  width: 20rem;
-  height: 16rem;
-  background-color: #fff;
-  border-radius: 16px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2), 0 8px 16px rgba(0, 0, 0, 0.15);
+  background: conic-gradient(#CA4246 16.666%,
+      #E16541 16.666%,
+      #E16541 33.333%,
+      #F18F43 33.333%,
+      #F18F43 50%,
+      #8B9862 50%,
+      #8B9862 66.666%,
+      #476098 66.666%,
+      #476098 83.333%,
+      #A7489B 83.333%);
 
-  backface-visibility: hidden;
+  /* Set thee background size and repeat properties. */
+  background-size: 57%;
+  background-repeat: repeat;
 
-  transform-style: preserve-3d;
-  perspective: 800px;
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Animate the text when loading the element. */
+  /* This animates it on page load and when hovering out. */
+  animation: rainbow-text-animation-rev 0.5s ease forwards;
+
+  cursor: pointer;
 }
 
-.card .content {
-  width: 100%;
-  height: 100%;
-  font-size: 2rem;
-  color: #666;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  position: absolute;
-  transform-style: preserve-3d;
-
-  transform: translateZ(2rem) rotateY(0deg);
-  filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.2));
-  color: #fff;
-}
-
-.info {
-  position: absolute;
-  bottom: 2rem;
-  color: #454545;
-  left: 50%;
-  z-index: 1000;
-  transform: translateX(-50%);
-  text-align: center;
-  line-height: 1.3;
-  font-size: 0.8rem;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.info .smile {
-  font-size: 1.2rem;
-}
-
-.info .name {
-  font-weight: 300;
-  font-size: 1.2rem;
-}
-
-.card:nth-child(1) {
-  background: linear-gradient(135deg, #ce9ffc 0%, #7367f0 100%);
-}
-
-.card:nth-child(6) {
-  background: linear-gradient(135deg, #c3ec52aa 0%, #0ba29daa 100%);
-}
-
-.card:nth-child(3) {
-  background: linear-gradient(135deg, #0ff0b388 0%, #036ed988 100%);
-}
-
-.card:nth-child(4) {
-  background: linear-gradient(135deg, #fcdf8a 0%, #f38381 100%);
-}
-
-.card:nth-child(5) {
-  background: linear-gradient(135deg, #fad961aa 0%, #f76b1caa 100%);
-}
-
-.card:nth-child(2) {
-  background: linear-gradient(135deg, #f02fc2cc 0%, #6094eacc 100%);
+/* Add animation on hover. */
+.rainbow-text:hover {
+  animation: rainbow-text-animation 0.5s ease forwards;
 }
 </style>
