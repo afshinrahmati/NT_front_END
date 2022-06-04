@@ -1,18 +1,21 @@
 <template>
   <section>
     <!-- particles.js container -->
-    <div id="particles-js"></div>
+    <div id="particles-js">
+      <h1 class="text-step-two">{{ $t("messages.stepTwo") }}</h1>
+    </div>
 
     <!-- stats - count particles -->
     <div class="count-particles">
-      <carousel>
-        <img src="https://placeimg.com/200/200/any?1" />
+      <carousel :responsive="{ 1000: { items: 3 }, 200: { items: 3 } }">
+        <img src="~/assets/images/bit1.png" />
 
-        <img src="https://placeimg.com/200/200/any?2" />
+        <img src="~/assets/images/pro1.png" />
+        <img src="~/assets/images/fun1.png" />
+        <img src="~/assets/images/book1.png" />
 
-        <img src="https://placeimg.com/200/200/any?3" />
-
-        <img src="https://placeimg.com/200/200/any?4" />
+        <img src="~/assets/images/en1.png" />
+        <img src="~/assets/images/film1.png" />
       </carousel>
     </div>
   </section>
@@ -162,7 +165,7 @@ export default {
       requestAnimationFrame(update);
     }
     window.setTimeout(() => {
-      test()
+      test();
     }, 2000);
   },
   methods: {
@@ -198,12 +201,19 @@ canvas {
 
 #particles-js {
   position: absolute;
-  background-color: #b61924;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;
+  background-color: #137908;
+  position: relative;
   height: 100vh;
   width: 100%;
+}
+#particles-js::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background: #98e08d27;
 }
 
 /* ---- stats.js ---- */
@@ -230,11 +240,34 @@ canvas {
 .js-count-particles {
   font-size: 1.1em;
 }
-
+h1.text-step-two {
+  color: #255e0b;
+  /* background-color: #B8F1B0; */
+  background: linear-gradient(
+    45deg,
+    #c95353,
+    orange,
+    yellow,
+    #eaffea,
+    #df5a46,
+    #edfa2f,
+    violet,
+    red
+  );
+  border-radius: 0px 0px 50px 50px;
+}
 .owl-carousel .owl-item img {
   display: block;
   width: 69%;
   margin-left: 69px;
   border-radius: 30px;
+}
+@media only screen and (max-width: 600px) {
+  .owl-carousel .owl-item img {
+    display: block;
+    width: 94%;
+    margin-left: 6px;
+    border-radius: 30px;
+  }
 }
 </style>

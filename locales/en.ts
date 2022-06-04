@@ -3,6 +3,7 @@ export default {
     first_heather: "Call for advice",
     welcome: "Welcome to NiceTry",
     account: "MY ACCOUNT",
+    stepTwo: "General services of our website"
   },
   button: {
     en: "english",
